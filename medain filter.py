@@ -8,7 +8,7 @@ median = cv2.medianBlur(random_matrix_array,3)
 
 plt.imshow(median)
 plt.show()
-print('adddda',random_matrix_array)
+print('random matrix = ',random_matrix_array)
 print('---------------------------------------------------------------------------------------------/n')
 print('after using filtering the pixel size is nearly same /n')
 print(median)
