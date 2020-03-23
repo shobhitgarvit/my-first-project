@@ -13,7 +13,8 @@ print('-------------------------------------------------------------------------
 print('after using filtering the pixel size is nearly same /n')
 print(median)
 
-
+#-----------------------------------------------------------------------------------------------------------------
+#rotaing plane code
 
 import pygame
 from pygame.locals import *
