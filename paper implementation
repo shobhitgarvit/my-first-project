@@ -1,0 +1,54 @@
+from matplotlib import pyplot as plt
+from mpl_toolkits. mplot3d import Axes3D
+import math
+fig = plt.figure()
+ax = fig.add_subplot(projection = '3d')
+lidar_rotaion_angle = xr = yr = 0
+lidar_max_range= 12
+array = []
+
+for i in range(360):
+    x = round(lidar_max_range * math.cos(math.radians(lidar_rotaion_angle)), 3)
+    y = round(lidar_max_range * math.sin(math.radians(lidar_rotaion_angle)), 3)
+    lidar_rotaion_angle = lidar_rotaion_angle+1
+    if 0<i <90:
+        if (5<= i<=18 or 30<= i<=40):
+            x =5
+        if 50<i<65:
+            y =5
+    if 90<i<180:
+        if 95<i<105 or 157<i<169 or 175<i<179:
+            y = 5
+        if i>= 135 :
+            x = -5
+    if 180< i <270:
+        if 195<i<215:
+            x =-5
+        if 251 <i < 256 :
+            y =-5
+
+    if 270<i<360:
+        if 276 <i<280 or i ==300 or i== 309:
+            y = -5
+        if 320<i<330 or 345<i<355:
+            x =5
+
+
+
+
+    m =x,y
+    ax.scatter(x,y, marker = '.')
+    ax.scatter(xr, yr, marker='*')
+    array.append(m)
+print(array)
+plt.show()
+
+
+
+
+
+
+
+
+
+
